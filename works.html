@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css">
+</head>
+<style>
+    body {
+        scroll-behavior: smooth;
+        padding: 0;
+        margin: 0;
+        background-color: yellow;
+    }
+
+    .head {
+        height: 30vh;
+        display: flex;
+        text-align: center;
+    }
+
+    .head h1 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 900;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+
+    .head a {
+        position: absolute;
+        right: 0%;
+        top: 15%;
+        transform: translate(-50%, -50%);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 10px 4rem;
+        border-radius: 3rem;
+        font-weight: 900;
+        color: black;
+        text-decoration: none;
+        border: 3px solid transparent;
+        cursor: pointer;
+        transition: all .5s;
+    }
+
+    .head a:hover {
+        border-color: black;
+        color: black;
+        text-decoration: none;
+    }
+
+    .boxing {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .boxing2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pic {
+        height: 100%;
+        width: 100%;
+
+        text-align: center;
+        padding: 50px;
+    }
+
+    .pic img {
+        height: 100%;
+        width: 70vh;
+    }
+
+    .abt {
+        height: 100%;
+
+        padding: 0px 70px 20px 30px;
+        min-width: 500px;
+        max-height: 70vh;
+        align-self: center;
+    }
+
+    .blk {
+        position: relative;
+        width: 255px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        border: 5px solid purple;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+
+    .blk2,
+    .blk4,
+    .blk5,
+    .blk1 {
+        border: 5px solid yellow;
+        height: 40px;
+        width: 30px;
+        position: absolute;
+    }
+
+    .blk1,
+    .blk2 {
+        top: -15px;
+    }
+
+    .blk2,
+    .blk5 {
+        right: -15px;
+    }
+
+    .blk4,
+    .blk1 {
+        left: -15px;
+    }
+
+    .blk5,
+    .blk4 {
+        top: 40px;
+    }
+
+    #st {
+        position: relative;
+        color: #2196f3;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-size: 40px;
+        letter-spacing: 2px;
+        text-decoration: none;
+    }
+
+    .abt .content {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 700;
+
+        text-align: justify;
+    }
+
+    @media only screen and (max-width: 1020px) {
+
+        .boxing {
+            flex-direction: column;
+        }
+
+        .boxing2 {
+            flex-direction: column-reverse;
+        }
+
+        .pic img {
+            height: 80%;
+            width: 80%;
+        }
+
+        .abt {
+            padding: 0px 30px 30px 30px;
+            min-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .head a {
+            right: -40px;
+            top: 50px;
+            padding: 5px 2rem;
+        }
+
+        .pic {
+            padding: 10px;
+        }
+
+        .blk {
+            width: 215px;
+            height: 63px;
+            margin-bottom: 10px;
+        }
+
+
+        .blk2,
+        .blk4,
+        .blk5,
+        .blk1 {
+            height: 30px;
+            width: 30px;
+        }
+
+        #st {
+            font-size: 35px;
+        }
+
+    }
+
+    @media only screen and (max-width:520px) {
+
+        .pic {
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .pic img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .blk {
+            width: 180px;
+            height: 55px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .blk2,
+        .blk4,
+        .blk5,
+        .blk1 {
+            height: 30px;
+            width: 30px;
+            border: 3px solid white;
+        }
+
+        #st {
+            font-size: 28px;
+        }
+
+        .blk5,
+        .blk4 {
+            top: 35px;
+        }
+
+    }
+
+    @media only screen and (max-width: 400px) {
+
+        .head a {
+            right: -40px;
+            top: 40px;
+            padding: 3px 1rem;
+        }
+
+        .abt {
+            padding: 0px 20px 10px 20px;
+        }
+
+        .abt .content {
+            font-weight: 200;
+        }
+
+
+    }
+</style>
+
+<body>
+    <div class="container-fluid head">
+        <h1>Works</h1>
+        <a href="index.html">
+            Home
+        </a>
+    </div>
+    <main>
+        <div class="container-fluid boxing">
+            <div class="pic"><img src="./assest/undraw_having_fun_iais.svg"></div>
+            <div class="abt">
+                <div class="blk">
+                    <div class="blk1"></div>
+                    <div class="blk2"></div>
+                    <div class="blk3"><a href="#" id="st">About US
+                        </a>
+                    </div>
+                    <div class="blk4"></div>
+                    <div class="blk5"></div>
+                </div>
+                <div class="content">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                    galley
+                    of
+                    type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the
+                    leap
+                    into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the
+                    release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software
+                    like
+                    Aldus
+                    PageMaker including versions of Lorem Ipsum.
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid boxing2">
+            <div class="abt">
+                <div class="blk">
+                    <div class="blk1"></div>
+                    <div class="blk2"></div>
+                    <div class="blk3"><a href="#" id="st">About US
+                        </a>
+                    </div>
+                    <div class="blk4"></div>
+                    <div class="blk5"></div>
+                </div>
+                <div class="content">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                    galley
+                    of
+                    type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the
+                    leap
+                    into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the
+                    release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software
+                    like
+                    Aldus
+                    PageMaker including versions of Lorem Ipsum.
+                </div>
+            </div>
+            <div class="pic"><img src="./assest/undraw_having_fun_iais.svg"></div>
+        </div>
+        <div class="container-fluid boxing">
+            <div class="pic"><img src="./assest/undraw_having_fun_iais.svg"></div>
+            <div class="abt">
+                <div class="blk">
+                    <div class="blk1"></div>
+                    <div class="blk2"></div>
+                    <div class="blk3"><a href="#" id="st">About US
+                        </a>
+                    </div>
+                    <div class="blk4"></div>
+                    <div class="blk5"></div>
+                </div>
+                <div class="content">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                    galley
+                    of
+                    type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the
+                    leap
+                    into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the
+                    release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software
+                    like
+                    Aldus
+                    PageMaker including versions of Lorem Ipsum.
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid boxing2">
+            <div class="abt">
+                <div class="blk">
+                    <div class="blk1"></div>
+                    <div class="blk2"></div>
+                    <div class="blk3"><a href="#" id="st">About US
+                        </a>
+                    </div>
+                    <div class="blk4"></div>
+                    <div class="blk5"></div>
+                </div>
+                <div class="content">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                    galley
+                    of
+                    type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the
+                    leap
+                    into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the
+                    release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software
+                    like
+                    Aldus
+                    PageMaker including versions of Lorem Ipsum.
+                </div>
+            </div>
+            <div class="pic"><img src="./assest/undraw_having_fun_iais.svg"></div>
+        </div>
+        <div class="container-fluid boxing">
+            <div class="pic"><img src="./assest/undraw_having_fun_iais.svg"></div>
+            <div class="abt">
+                <div class="blk">
+                    <div class="blk1"></div>
+                    <div class="blk2"></div>
+                    <div class="blk3"><a href="#" id="st">About US
+                        </a>
+                    </div>
+                    <div class="blk4"></div>
+                    <div class="blk5"></div>
+                </div>
+                <div class="content">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                    galley
+                    of
+                    type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the
+                    leap
+                    into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the
+                    release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software
+                    like
+                    Aldus
+                    PageMaker including versions of Lorem Ipsum.
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid boxing2">
+            <div class="abt">
+                <div class="blk">
+                    <div class="blk1"></div>
+                    <div class="blk2"></div>
+                    <div class="blk3"><a href="#" id="st">About US
+                        </a>
+                    </div>
+                    <div class="blk4"></div>
+                    <div class="blk5"></div>
+                </div>
+                <div class="content">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                    galley
+                    of
+                    type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the
+                    leap
+                    into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the
+                    release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software
+                    like
+                    Aldus
+                    PageMaker including versions of Lorem Ipsum.
+                </div>
+            </div>
+            <div class="pic"><img src="./assest/undraw_having_fun_iais.svg"></div>
+        </div>
+    </main>
+    <sript src="./jquery/dist/jquery.min.js"></sript>
+    </script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

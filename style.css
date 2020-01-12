@@ -1,0 +1,666 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: yellow;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: relative;
+    margin: 0;
+    max-width: 100%;
+    background: transparent;
+    padding: 5px;
+    box-shadow: 0 2px 5pz rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.logo1 {
+    color: rgb(156, 13, 223);
+    height: 60px;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    float: left;
+}
+
+.logo1:hover {
+    text-decoration: none;
+    color: #069370;
+}
+
+.box1 {
+    background-color: yellow;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100vw;
+    clip-path: circle(0px at 50% 0%);
+    transition: all 1s ease-in-out;
+}
+
+.box1.open {
+    position: fixed;
+    clip-path: circle(150vh at 50% 0%);
+}
+
+nav {
+    opacity: 0;
+    pointer-events: none;
+    margin: 0;
+    text-align: center;
+    padding: 60px 0;
+}
+
+nav.active {
+    pointer-events: all;
+    opacity: 1;
+    transition: all 2s ease;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: block;
+    transition: all 1.5s ease-out;
+    margin: 2.5% 0px 25px 0px;
+}
+
+nav ul li a {
+    padding: 5px 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.hamburger {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    background: rgb(156, 13, 223);
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 25px;
+    color: white;
+    height: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all .2s;
+}
+
+.icon:before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    background-color: white;
+    width: 25px;
+    color: white;
+    height: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all .5s;
+}
+
+.icon:after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    background-color: white;
+    width: 25px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: 4px;
+    transition: all .5s;
+}
+
+.hamburger.active .icon {
+    background-color: transparent;
+    color: transparent;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.hamburger.active .icon:before {
+    top: 0;
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.hamburger.active .icon:after {
+    top: 0;
+    transform: rotate(135deg);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    background-color: white;
+    right: 0;
+    width: 100%;
+}
+
+#carouselExampleControls {
+    height: 88vh;
+
+    margin: 0;
+    overflow: hidden;
+}
+
+.box {
+    height: 100%;
+}
+
+.quote {
+    top: 10vh;
+    height: 60vh;
+    padding-top: 25vh;
+    width: 100%;
+    text-align: center;
+}
+
+.quote span {
+    font-size: 20px;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.img1 {
+    top: 10vh;
+    height: 60vh;
+    width: 100%;
+    padding: 40px;
+}
+
+.img1 img {
+    height: 100%;
+    width: 100%;
+}
+
+div svg {
+    height: 100%;
+    width: 100%;
+}
+
+#right-wheel,
+#left-wheel {
+    animation: wheel 2s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#man {
+    animation: man 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+#hat {
+    animation: hat1 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes hat1 {
+    from {
+        transform: translateY(00%);
+    }
+
+    to {
+        transform: translateY(30%);
+    }
+}
+
+@keyframes man {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(15deg);
+    }
+}
+
+@keyframes wheel {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 10px 35px;
+    font-weight: 900;
+    position: relative;
+    border-radius: 2rem;
+    z-index: 10;
+    background: transparent;
+    border: 3px solid rgb(52, 1, 65);
+}
+
+#about-us {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    min-height: 60vh;
+}
+
+.abt-img {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+
+}
+
+.abt-img img {
+    height: 100%;
+    width: 25rem;
+}
+
+
+.abt {
+    height: 100%;
+    padding: 0px 50px 20px 30px;
+    min-width: 500px;
+    max-height: 70vh;
+    align-self: center;
+}
+
+.blk {
+    position: relative;
+    width: 255px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    border: 5px solid purple;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.blk2,
+.blk4,
+.blk5,
+.blk1 {
+    border: 5px solid yellow;
+    height: 40px;
+    width: 30px;
+    position: absolute;
+}
+
+.blk1,
+.blk2 {
+    top: -15px;
+}
+
+.blk2,
+.blk5 {
+    right: -15px;
+}
+
+.blk4,
+.blk1 {
+    left: -15px;
+}
+
+.blk5,
+.blk4 {
+    top: 40px;
+}
+
+#st {
+    position: relative;
+    color: #2196f3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.abt .content {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    text-align: justify;
+}
+
+#feedback {
+    position: relative;
+    text-align: center;
+}
+
+
+.feed {
+    min-width: 40rem;
+    padding: 50px 150px 20px 50px;
+}
+
+.bkl {
+    top: 0;
+    left: 1rem;
+}
+
+.foot {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.visit-us,
+.contact-us {
+    height: 20rem;
+    padding-bottom: 5rem;
+}
+
+
+.visit-us {
+    width: 60%;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+}
+
+.visit-us h4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    background-color: transparent;
+    color: white;
+}
+
+.contact-us {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.con {
+    margin-top: 1rem;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+}
+
+.box10 {
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.box10 a {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.box11 {
+    text-align: center;
+    width: 20%;
+    background-color: transparent;
+}
+
+.box12 {
+    text-align: left;
+}
+
+.box13 {
+    display: flex;
+    flex-direction: row;
+}
+
+.add3 {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline;
+    font-size: 20px;
+}
+
+.add3 span {
+    width: 1rem;
+
+
+}
+
+@media only screen and (max-width:1020px) {
+
+    #about-us {
+        flex-direction: column;
+    }
+
+    .abt-img {
+        padding: 50px;
+    }
+
+    .abt-img img {
+        height: 70%;
+        width: 70%;
+    }
+
+    .fee-img {
+        padding-bottom: 0px;
+    }
+
+    .fee-img img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .abt {
+        padding: 0px 30px 30px 30px;
+        min-width: 100%;
+        max-height: 100%;
+    }
+
+    .feed {
+        padding: 20px 20px 20px 20px;
+    }
+
+    .foot {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .visit-us,
+    .contact-us {
+        height: 20rem;
+        width: 100%;
+    }
+
+    .box10 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .quote {
+        top: 0;
+        height: 35vh;
+        padding-top: 8vh;
+    }
+
+    .img1 {
+        top: 0;
+        height: 53vh;
+        padding: 20px;
+    }
+
+    .btn1 {
+        padding: 7px 25px;
+        border-radius: 2rem;
+        border: 2px solid rgb(52, 1, 65);
+    }
+
+    .abt-img {
+        padding: 10px;
+    }
+
+    .feed {
+        min-width: 100%;
+        padding: 20px;
+    }
+
+    .blk {
+        width: 215px;
+        height: 63px;
+        margin-bottom: 10px;
+    }
+
+    .blk2,
+    .blk4,
+    .blk5,
+    .blk1 {
+        height: 30px;
+        width: 30px;
+    }
+
+    #st {
+        font-size: 35px;
+    }
+
+}
+
+@media only screen and (max-width:520px) {
+
+    .abt-img {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .abt-img img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .blk {
+        width: 180px;
+        height: 55px;
+        margin-bottom: 15px;
+    }
+
+    .blk2,
+    .blk4,
+    .blk5,
+    .blk1 {
+        height: 30px;
+        width: 30px;
+
+    }
+
+    #st {
+        font-size: 28px;
+    }
+
+    .blk5,
+    .blk4 {
+        top: 35px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .btn1 {
+        top: -20px;
+    }
+
+    .quote {
+        padding-top: 4vh;
+    }
+
+    .abt {
+        padding: 0px 20px 10px 20px;
+    }
+
+    .feed {
+        padding: 20px 10px 10px 10px;
+    }
+
+    .abt .content {
+        font-weight: 200;
+    }
+
+
+}
+
+@media only screen and (max-width: 320px) {
+    #carouselExampleControls {
+        height: 80vh;
+    }
+
+    .quote {
+        padding-top: 3vh;
+        height: 100%;
+    }
+
+    .quote span {
+        font-size: 16px;
+    }
+
+    .img1 {
+        padding: 10px;
+    }
+
+    .btn1 {
+        top: -15px;
+        padding: 3px 15px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 266px) {
+    .quote span {
+        font-size: 15px;
+    }
+
+    .btn1 {
+        top: -15px;
+        padding: 3px 15px;
+        font-weight: 500;
+        border: 1.5px solid rgb(52, 1, 65);
+    }
+
+    .img1 {
+        height: 50vh;
+    }
+}
