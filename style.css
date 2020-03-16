@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: yellow;
+    background-color: white;
     scroll-behavior: smooth;
 }
 
@@ -38,7 +38,7 @@ header {
 }
 
 .box1 {
-    background-color: yellow;
+    background-color: white;
     position: fixed;
     top: 0;
     z-index: 999;
@@ -319,7 +319,7 @@ div svg {
 .blk4,
 .blk5,
 .blk1 {
-    border: 5px solid yellow;
+    border: 5px solid white;
     height: 40px;
     width: 30px;
     position: absolute;
@@ -430,8 +430,8 @@ div svg {
 }
 
 .box10 a {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .box11 {
@@ -509,6 +509,11 @@ div svg {
 
     .box10 {
         margin-bottom: 2rem;
+    }
+
+    .map {
+        background-color: red;
+        width: 100%;
     }
 }
 
@@ -620,6 +625,10 @@ div svg {
         font-weight: 200;
     }
 
+    .box10 a {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
 }
 
@@ -646,6 +655,7 @@ div svg {
         padding: 3px 15px;
         font-weight: 600;
     }
+
 }
 
 @media only screen and (max-width: 266px) {
@@ -663,4 +673,5 @@ div svg {
     .img1 {
         height: 50vh;
     }
+
 }
